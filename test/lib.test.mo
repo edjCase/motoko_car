@@ -1,7 +1,7 @@
 import { test } "mo:test";
 import CAR "../src";
-import Blob "mo:new-base/Blob";
-import Runtime "mo:new-base/Runtime";
+import Blob "mo:core/Blob";
+import Runtime "mo:core/Runtime";
 
 test(
   "to/fromBytes",
@@ -15,9 +15,9 @@ test(
         blocks = [
           {
             cid = #v1({
-              codec = #dag_cbor;
+              codec = #dagCbor;
               hash = "\F8\8B\C8\53\80\4C\F2\94\FE\41\7E\4F\A8\30\28\68\9F\CD\B1\B1\59\2C\51\02\E1\47\4D\BC\20\0F\AB\8B";
-              hashAlgorithm = #sha2_256;
+              hashAlgorithm = #sha2256;
             });
             data = "\A2\64\6C\69\6E\6B\D8\2A\58\23\00\12\20\02\AC\EC\C5\DE\24\38\EA\41\26\A3\01\0E\CB\1F\8A\59\9C\8E\FF\22\FF\F1\A1\DC\FF\E9\99\B2\7F\D3\DE\64\6E\61\6D\65\64\62\6C\69\70";
           },
@@ -31,7 +31,7 @@ test(
             cid = #v1({
               codec = #raw;
               hash = "\B6\FB\D6\75\F9\8E\2A\BD\22\D4\ED\29\FD\C8\31\50\FE\DC\48\59\7E\92\DD\1A\7A\24\38\1D\44\A2\74\51";
-              hashAlgorithm = #sha2_256;
+              hashAlgorithm = #sha2256;
             });
             data = "\63\63\63\63";
           },
@@ -45,7 +45,7 @@ test(
             cid = #v1({
               codec = #raw;
               hash = "\81\CC\5B\17\01\86\74\B4\01\B4\2F\35\BA\07\BB\79\E2\11\23\9C\23\BF\FE\65\8D\A1\57\7E\3E\64\68\77";
-              hashAlgorithm = #sha2_256;
+              hashAlgorithm = #sha2256;
             });
             data = "\62\62\62\62";
           },
@@ -59,21 +59,21 @@ test(
             cid = #v1({
               codec = #raw;
               hash = "\61\BE\55\A8\E2\F6\B4\E1\72\33\8B\DD\F1\84\D6\DB\EE\29\C9\88\53\E0\A0\48\5E\CE\E7\F2\7B\9A\F0\B4";
-              hashAlgorithm = #sha2_256;
+              hashAlgorithm = #sha2256;
             });
             data = "\61\61\61\61";
           },
           {
             cid = #v1({
-              codec = #dag_cbor;
+              codec = #dagCbor;
               hash = "\69\EA\07\40\F9\80\7A\28\F4\D9\32\C6\2E\7C\1C\83\BE\05\5E\55\07\2C\90\26\6A\B3\E7\9D\F6\3A\36\5B";
-              hashAlgorithm = #sha2_256;
+              hashAlgorithm = #sha2256;
             });
             data = "\A2\64\6C\69\6E\6B\F6\64\6E\61\6D\65\65\6C\69\6D\62\6F";
           },
         ];
         header = {
-          roots = [#v1({ codec = #dag_cbor; hash = "\F8\8B\C8\53\80\4C\F2\94\FE\41\7E\4F\A8\30\28\68\9F\CD\B1\B1\59\2C\51\02\E1\47\4D\BC\20\0F\AB\8B"; hashAlgorithm = #sha2_256 }), #v1({ codec = #dag_cbor; hash = "\69\EA\07\40\F9\80\7A\28\F4\D9\32\C6\2E\7C\1C\83\BE\05\5E\55\07\2C\90\26\6A\B3\E7\9D\F6\3A\36\5B"; hashAlgorithm = #sha2_256 })];
+          roots = [#v1({ codec = #dagCbor; hash = "\F8\8B\C8\53\80\4C\F2\94\FE\41\7E\4F\A8\30\28\68\9F\CD\B1\B1\59\2C\51\02\E1\47\4D\BC\20\0F\AB\8B"; hashAlgorithm = #sha2256 }), #v1({ codec = #dagCbor; hash = "\69\EA\07\40\F9\80\7A\28\F4\D9\32\C6\2E\7C\1C\83\BE\05\5E\55\07\2C\90\26\6A\B3\E7\9D\F6\3A\36\5B"; hashAlgorithm = #sha2256 })];
           version = 1;
         };
       };
