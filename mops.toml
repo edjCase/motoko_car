@@ -1,15 +1,15 @@
 [package]
 name = "car"
-version = "1.0.0"
+version = "1.0.1"
 description = "A library to encode and handle CAR files in Motoko"
 repository = "https://github.com/edjcase/motoko_car"
-keywords = [ "car", "ipld", "atproto", "archive", "ipfs" ]
+keywords = ["car", "ipld", "atproto", "archive", "ipfs"]
 license = "MIT"
 
 [dependencies]
 core = "0.6.0"
-cid = "1.0.1"
-dag-cbor = "2.0.1"
+cid = "1.0.2"
+dag-cbor = "2.0.2"
 multiformats = "2.0.1"
 leb128 = "1.0.0"
 

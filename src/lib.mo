@@ -65,9 +65,6 @@ module {
   };
 
   public func fromBytes(bytes : Iter.Iter<Nat8>) : Result.Result<File, Text> {
-    // if (true) {
-    //     Runtime.trap("Debug: fromBytes called with bytes: " # debug_show (Blob.fromArray(Iter.toArray(bytes))));
-    // };
     let headerLength = switch (LEB128.fromUnsignedBytes(bytes)) {
       case (#ok(length)) length;
       case (#err(err)) return #err("Failed to read header length: " # debug_show (err));
